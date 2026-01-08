@@ -1,32 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form action="">
-        <label for="">Nama Diklat</label><br>
-        <input type="text"><br>
-        <label for="">Nama Kelas</label><br>
-        <input type="text"><br>
-        <label for="">Nama Instruktur</label><br>
-        <input type="text"><br>
-        <label for="">Tanggal Mulai Diklat</label><br>
-        <input type="date"><br>
-        <label for="">Tanggal Selesai Diklat</label><br>
-        <input type="date"><br>
-        <label for="">Jam Mulai Diklat</label><br>
-        <input type="time"><br>
-        <label for="">Jam Selesai Diklat</label><br>
-        <input type="time"><br>
-        <label for="">Status Diklat Diklat</label><br>
-        <input type="text"><br>
+<x-layout>
 
-        <button>Simpan</button>
-        <button>Batal</button>
-    </form>
-</body>
-</html>
+    <x-slot name="title">{{ $title }}</x-slot>
+
+    <div class="container">
+
+        <form action="">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </form>
+
+    </div>
+</x-layout>

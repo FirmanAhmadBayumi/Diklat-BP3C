@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
-    <table class="table table-dark table-striped">
+<x-layout>
+
+    <x-slot:title>{{ $title }}</x-slot:title>
+
+    <div class="container">
+        <div class="logo d-inline-flex flex-row mb4">
+            <div class="p-2 ">
+                <img src="images/logo_kemenhub.png" alt="Kemenhub" width="75px" height="80px">
+            </div>
+            <div class="p-2">
+                <img src="images/" alt="">
+            </div>
+            <div class="p-2">
+                <img src="images/logo_bp3c.png" alt="BP3C" width="75px" height="80px">
+            </div>
+            <div class="p-2">
+                <img src="images/" alt="">
+            </div>
+        </div>
+        <table class="table table-dark table-striped">
             <tr>
                 <th>Nama Diklat</th>
                 <th>Kelas</th>
@@ -23,6 +31,8 @@
                 <td>08.30 - 17.00</td>
             </tr>
     </table>
-    <footer></footer>
-</body>
-</html>
+    </div>
+
+    
+
+</x-layout>

@@ -4,7 +4,9 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+        $title = 'Pelaksanaan Diklat';
+
+    return view('index', compact('title'));
 });
 
 //Admin
