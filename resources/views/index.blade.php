@@ -25,14 +25,12 @@
                 <th>Jam</th>
             </tr>
             <tr>
-                <td>Customer Experience & Service Excellence</td>
-                <td>Kelas 3.1 Soekarno Hatta</td>
-                <td>Dedy Fachrudin</td>
-                <td>08.30 - 17.00</td>
+                <td>{{ $tampil_diklat->nama_diklat }}</td>
+                <td>{{ $tampil_diklat->nama_kelas }}</td>
+                <td>{{ $tampil_diklat->nama_instruktur }}</td>
+                <td>{{ $tampil_diklat->jam_mulai_diklat }} - {{ $tampil_diklat->jam_selesai_diklat }}</td>
             </tr>
     </table>
     </div>
-
-    
 
 </x-layout>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\data_diklat;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,11 +15,19 @@ class AdminController extends Controller
         return view('admin.data_diklat', $data_diklat);
     }
 
-    // public function tambah_diklat(){
-    //     $tambah_diklat = [
-    //         'title' => 'Tambah Diklat',
-    //     ];
+    public function tambah_diklat(Request $request){
+        $request->validate([
+            'nama_diklat' => 'required',
+            'nama_kelas' => 'required',
+            'nama_instruktur' => 'required',
+            'tgl_mulai_diklat' => 'required',
+            'tgl_selesai_diklat' => 'required',
+            'jam_mulai_diklat' => 'required',
+            'jam_selesai_diklat' => 'required',
+        ]);
 
-    //     return view('admin.tambah_diklat', $tambah_diklat);
-    // }
+        data_diklat::create($request->all());
+
+        return redirect()->back()->with('success', 'Data berhasil masuk');
+    }
 }
