@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Models\data_diklat;
 
+//Index
 Route::get('/', function () {
     $data_diklat = [
         'title' => 'Pelaksanaan Diklat',
